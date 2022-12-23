@@ -15,6 +15,7 @@ public class App {
         for (int num : nums) {
             list.add( num );
         }
-        return (int) list.stream().distinct().count();
+        List<Integer> distinct = list.stream().distinct().toList();
+        return distinct.size();
     }
 }
