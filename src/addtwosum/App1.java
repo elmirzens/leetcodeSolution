@@ -23,5 +23,8 @@ public class App1 {
         for (int i = chars.length - 1; i >= 0; i--) {
             System.out.print(chars[i]+" ");
         }
+        for (int i = 0; i < l1.length; i++) {
+            
+        }
     }
 }
