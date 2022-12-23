@@ -8,23 +8,14 @@ public class App {
     }
 
     public static String longestCommonPrefix(String[] strs) {
-        StringBuilder prefix = new StringBuilder();
-        if(strs == null || strs.length == 0) {
-            return prefix.toString();
+        if(strs == null || strs.length == 0)    return "";
+        String pre = strs[0];
+        int i = 1;
+        while(i < strs.length){
+            while(strs[i].indexOf(pre) != 0)
+                pre = pre.substring(0,pre.length()-1);
+            i++;
         }
-        int minimumLength = strs[0].length();
-        for (int i = 1; i < strs.length; i++) {
-            minimumLength = Math.min( minimumLength, strs[i].length() );
-        }
-        for (int i = 0; i < minimumLength; i++) {
-            char count = strs[0].charAt( i );
-            for (String string : strs) {
-                if(string.charAt( i ) != count) {
-                    return prefix.toString();
-                }
-            }
-            prefix.append( count );
-        }
-        return prefix.toString();
+        return pre;
     }
 }

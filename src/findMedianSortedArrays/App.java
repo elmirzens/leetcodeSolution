@@ -6,8 +6,8 @@ import java.util.List;
 public class App {
     public static void main(String[] args) {
 
-        int[] num1 = {1, 2};
-        int[] num2 = {3, 4};
+        int[] num1 = {1,3};
+        int[] num2 = {2,7};
         System.out.println( findMedianSortedArrays( num1, num2 ) );
 
     }
