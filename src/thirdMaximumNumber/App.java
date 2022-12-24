@@ -6,8 +6,7 @@ public class App {
 
     public static void main(String[] args) {
         App app = new App();
-        int[] a = {1,1,2};
-        System.out.println( app.thirdMax( a ) );
+
 
     }
     public int thirdMax(int[] nums) {
