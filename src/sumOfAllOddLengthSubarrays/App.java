@@ -1,7 +1,5 @@
 package sumOfAllOddLengthSubarrays;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class App {
 
@@ -12,14 +10,21 @@ public class App {
 
     }
     public int sumOddLengthSubarrays(int[] arr) {
-        List<Integer> odd = new ArrayList<>();
-        for (int j : arr) {
-            if(j % 2 != 0) {
-                odd.add( j );
+        int n = arr.length;
+        int[] sum = new int[n];
+        int s = 0, ans = 0;
+        for(int i = 0; i < n; i++) {
+            s += arr[i];
+            sum[i] = s;
+        }
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j <= i; j++) {
+                if((i - j + 1) % 2 == 0) continue;
+                ans += sum[i];
+                if(j != 0) ans -= sum[j - 1];
             }
         }
-        System.out.println(odd);
-        return 0;
+        return ans;
     }
 }
 
