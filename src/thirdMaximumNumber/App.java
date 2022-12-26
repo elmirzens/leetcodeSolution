@@ -16,22 +16,22 @@ public class App {
                 first = nums[i];
             }
         HashSet<Integer> hashSet = new HashSet<>();
-        for (int i = 0; i < nums.length; i++) {
-            hashSet.add( nums[i] );
+        for (int num : nums) {
+            hashSet.add( num );
         }
         if(hashSet.size()<=2){
             return first;
         }
         int second = Integer.MIN_VALUE;
-        for (int i = 0; i < nums.length ; i++)
-            if (nums[i] > second && nums[i] < first){
-                second = nums[i];
+        for (int num : nums)
+            if(num > second && num < first) {
+                second = num;
             }
 
         int third = Integer.MIN_VALUE;
-        for (int i = 0; i < nums.length ; i++)
-            if (nums[i] > third && nums[i] < second){
-                third = nums[i];
+        for (int num : nums)
+            if(num > third && num < second) {
+                third = num;
             }
         return third;
     }
