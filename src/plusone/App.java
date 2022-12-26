@@ -13,16 +13,20 @@ public class App {
     }
 
     public static int[] plusOne(int[] digits) {
-        StringBuilder l1stringBuilder = new StringBuilder();
-        for (int digit : digits) {l1stringBuilder.append( digit );}
-        long l1Int = Long.parseLong( String.valueOf( l1stringBuilder ) );
-        String convert = String.valueOf( l1Int+1 );
-        char[] chars = convert.toCharArray();
-        List<Integer> list = new ArrayList<>();
-        for (char aChar : chars) {list.add( Integer.valueOf( String.valueOf( aChar ) ) );}
-        int[] array = new int[list.size()];
-        for (int i = 0; i < array.length; i++) {array[i]=list.get( i );}
-        return array;
+        for (int i = digits.length - 1; i >= 0; i--) {
+            if(digits[i]!=9){
+                digits[i]++;
+                break;
+            }else {
+                digits[i]=0;
+            }
+        }
+        if(digits[0]==0){
+            int[] ars = new int[digits.length+1];
+            ars[0] = 1;
+            return ars;
+        }
+        return digits;
     }
 
 }
