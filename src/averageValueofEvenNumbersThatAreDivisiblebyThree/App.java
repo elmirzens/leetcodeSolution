@@ -13,19 +13,15 @@ public class App {
 
     }
     public int averageValue(int[] nums) {
-        List<Integer> even = new ArrayList<>();
+        int count = 0;
+        int sum =0;
 
         for (int num : nums) {
-            if(num % 2 == 0) {
-                even.add( num );
+            if (num%6==0){
+                count++;
+                sum+=num;
             }
         }
-        if(even.size() == 1){
-            return 0;
-        }
-        int sum = even.stream()
-                .mapToInt(Integer::intValue)
-                .sum();
-        return sum/even.size();
+        return count == 0?0:sum/count;
     }
 }
