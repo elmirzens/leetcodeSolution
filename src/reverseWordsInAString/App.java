@@ -8,14 +8,15 @@ public class App {
         System.out.println( app.reverseWords( "God Ding" ) );
 
     }
+
     public String reverseWords(String s) {
 
-        String[] words =s.split("\\s");
-        StringBuilder reverseWord= new StringBuilder();
-        for(String w:words){
-            StringBuilder sb=new StringBuilder(w);
+        String[] words = s.split( "\\s" );
+        StringBuilder reverseWord = new StringBuilder();
+        for (String w : words) {
+            StringBuilder sb = new StringBuilder( w );
             sb.reverse();
-            reverseWord.append( sb.toString() ).append( " " );
+            reverseWord.append( sb ).append( " " );
         }
         return reverseWord.toString().trim();
     }
