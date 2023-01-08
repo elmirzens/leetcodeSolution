@@ -4,7 +4,7 @@ public class App {
 
     public static void main(String[] args) {
         App app = new App();
-        System.out.println( app.commonFactors(25,30) );
+         System.out.println( app.commonFactors(25,30) );
     }
     public int commonFactors(int a, int b) {
         while(b != 0)
