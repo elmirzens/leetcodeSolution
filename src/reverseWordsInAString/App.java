@@ -5,7 +5,7 @@ public class App {
     public static void main(String[] args) {
 
         App app = new App();
-        System.out.println( app.reverseWords( "Let's take LeetCode contest" ) );
+        System.out.println( app.reverseWords( "God Ding" ) );
 
     }
     public String reverseWords(String s) {
