@@ -5,7 +5,8 @@ public class App {
     public static void main(String[] args) {
 
         App app = new App();
-        System.out.println( app.reverseWords( "God Ding" ) );
+        System.out.println( app.reverseWords( "God hel paradise" ) );
+        System.out.println( app.reverseWords( "I love leetcode" ) );
 
     }
 
@@ -18,7 +19,6 @@ public class App {
             sb.reverse();
             reverseWord.append( sb ).append( " " );
         }
-        return reverseWord.toString().trim();
+        return reverseWord.toString();
     }
-
 }
