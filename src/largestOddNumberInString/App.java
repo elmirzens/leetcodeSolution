@@ -4,7 +4,7 @@ public class App {
 
     public static void main(String[] args) {
         App app = new App();
-        System.out.println( app.largestOddNumber( "35427" ) );
+        System.out.println( app.largestOddNumber( "52" ) );
     }
 
     public String largestOddNumber(String num) {
@@ -16,8 +16,10 @@ public class App {
         for (char aChar : chars) {
             if(Integer.parseInt( String.valueOf( aChar ) ) % 2 != 0) {
                 sb.append( aChar );
+            }else {
+                return "";
             }
         }
-        return "";
+        return sb.toString();
     }
 }
