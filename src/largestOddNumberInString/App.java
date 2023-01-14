@@ -5,7 +5,6 @@ public class App {
     public static void main(String[] args) {
         App app = new App();
         System.out.println( app.largestOddNumber( "35427" ) );
-        int num = 6;
     }
 
     public String largestOddNumber(String num) {
