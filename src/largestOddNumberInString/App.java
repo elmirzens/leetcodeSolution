@@ -18,7 +18,6 @@ public class App {
                 sb.append( aChar );
             }
         }
-        System.out.println(sb.toString());
         return "";
     }
 }
