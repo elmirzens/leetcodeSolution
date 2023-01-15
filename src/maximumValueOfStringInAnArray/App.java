@@ -30,8 +30,6 @@ public class App {
             return Collections.max( integers );
         }else {
         int length = strings.get( 0 ).length();
-
-
             for (String string : strings) {
                 if(string.length() > length) {
                     length = string.length();
