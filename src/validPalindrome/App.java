@@ -9,6 +9,7 @@ public class App {
     public static void main(String[] args) {
         App app = new App();
         System.out.println( app.isPalindrome("") );
+        System.out.println( app.isPalindrome("") );
     }
     public boolean isPalindrome(String s) {
         char[] array = s.toLowerCase().toCharArray();
