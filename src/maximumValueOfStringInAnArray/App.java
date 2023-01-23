@@ -8,12 +8,11 @@ public class App {
 
     public static void main(String[] args) {
         App app = new App();
-        String[] strings = {"bs9","j"};
-        String[] strings1 = {"1","01","001","0001"};
-        String[] strings2 = {"alic3","bob","3","4","00000"};
+        String[] strings = {"bs9","j","rtysertyu","8"};
+
         System.out.println( app.maximumValue( strings ) );
-        System.out.println( app.maximumValue( strings1 ) );
-        System.out.println( app.maximumValue( strings2 ) );
+
+
     }
 
     public int maximumValue(String[] strs) {
