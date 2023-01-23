@@ -10,6 +10,7 @@ public class App {
     }
     public boolean isPerfectSquare(int num) {
         double m=Math.sqrt(num);
+        double n=(int)Math.sqrt(num);
 return num > 0;
     }
 }
