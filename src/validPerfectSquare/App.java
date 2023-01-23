@@ -11,10 +11,6 @@ public class App {
     public boolean isPerfectSquare(int num) {
         double m=Math.sqrt(num);
         double n=(int)Math.sqrt(num);
-        if(m==n){
-            return true;
-        }else {
-            return false;
-        }
+        return m == n;
     }
 }
